@@ -13,9 +13,18 @@
 		6C192D8A1FADE37F00EC4C36 /* payEphone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C192D881FADE37F00EC4C36 /* payEphone.xcdatamodeld */; };
 		6C192D8C1FADE37F00EC4C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C192D8B1FADE37F00EC4C36 /* Assets.xcassets */; };
 		6C192D8F1FADE37F00EC4C36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C192D8D1FADE37F00EC4C36 /* LaunchScreen.storyboard */; };
+		6C6641F61FADE805009AFB64 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641F51FADE805009AFB64 /* RegisterController.swift */; };
+		6C6641F81FADE823009AFB64 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641F71FADE823009AFB64 /* IntroController.swift */; };
+		6C6641FA1FADF0A3009AFB64 /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641F91FADF0A3009AFB64 /* FindController.swift */; };
+		6C6641FC1FADF0F2009AFB64 /* MyCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641FB1FADF0F2009AFB64 /* MyCardController.swift */; };
+		6C6641FE1FADF103009AFB64 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641FD1FADF103009AFB64 /* SettingController.swift */; };
+		6C6642001FADF159009AFB64 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6641FF1FADF159009AFB64 /* HistoryController.swift */; };
+		869A3D002D3183C1082BE124 /* libPods-payEphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6F9D1CF1198D292CBFF284 /* libPods-payEphone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D6F9D1CF1198D292CBFF284 /* libPods-payEphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-payEphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC32CAC9CAACD5E54DAB843 /* Pods-payEphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payEphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-payEphone/Pods-payEphone.release.xcconfig"; sourceTree = "<group>"; };
 		6C192D7E1FADE37F00EC4C36 /* payEphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = payEphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C192D811FADE37F00EC4C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C192D831FADE37F00EC4C36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		6C192D8B1FADE37F00EC4C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C192D8E1FADE37F00EC4C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C192D901FADE37F00EC4C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6641F51FADE805009AFB64 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		6C6641F71FADE823009AFB64 /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		6C6641F91FADF0A3009AFB64 /* FindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
+		6C6641FB1FADF0F2009AFB64 /* MyCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardController.swift; sourceTree = "<group>"; };
+		6C6641FD1FADF103009AFB64 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		6C6641FF1FADF159009AFB64 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		B3356D64E12A0E62CA14AF05 /* Pods-payEphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payEphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payEphone/Pods-payEphone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869A3D002D3183C1082BE124 /* libPods-payEphone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B09F02D9404A1D8A17DA5C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3356D64E12A0E62CA14AF05 /* Pods-payEphone.debug.xcconfig */,
+				3BC32CAC9CAACD5E54DAB843 /* Pods-payEphone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6C192D751FADE37F00EC4C36 = {
 			isa = PBXGroup;
 			children = (
 				6C192D801FADE37F00EC4C36 /* payEphone */,
 				6C192D7F1FADE37F00EC4C36 /* Products */,
+				1B09F02D9404A1D8A17DA5C3 /* Pods */,
+				C1D3E8B56076ED7972EA778F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +84,8 @@
 		6C192D801FADE37F00EC4C36 /* payEphone */ = {
 			isa = PBXGroup;
 			children = (
+				6C6641F41FADE798009AFB64 /* ViewContoller */,
 				6C192D811FADE37F00EC4C36 /* AppDelegate.swift */,
-				6C192D831FADE37F00EC4C36 /* ViewController.swift */,
 				6C192D851FADE37F00EC4C36 /* Main.storyboard */,
 				6C192D8B1FADE37F00EC4C36 /* Assets.xcassets */,
 				6C192D8D1FADE37F00EC4C36 /* LaunchScreen.storyboard */,
@@ -67,6 +95,28 @@
 			path = payEphone;
 			sourceTree = "<group>";
 		};
+		6C6641F41FADE798009AFB64 /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				6C192D831FADE37F00EC4C36 /* ViewController.swift */,
+				6C6641F51FADE805009AFB64 /* RegisterController.swift */,
+				6C6641F71FADE823009AFB64 /* IntroController.swift */,
+				6C6641F91FADF0A3009AFB64 /* FindController.swift */,
+				6C6641FB1FADF0F2009AFB64 /* MyCardController.swift */,
+				6C6641FD1FADF103009AFB64 /* SettingController.swift */,
+				6C6641FF1FADF159009AFB64 /* HistoryController.swift */,
+			);
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		C1D3E8B56076ED7972EA778F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D6F9D1CF1198D292CBFF284 /* libPods-payEphone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C192D931FADE37F00EC4C36 /* Build configuration list for PBXNativeTarget "payEphone" */;
 			buildPhases = (
+				5C238221A0D730A704A01818 /* [CP] Check Pods Manifest.lock */,
 				6C192D7A1FADE37F00EC4C36 /* Sources */,
 				6C192D7B1FADE37F00EC4C36 /* Frameworks */,
 				6C192D7C1FADE37F00EC4C36 /* Resources */,
+				776329AB2F4E6F28B15F0BDA /* [CP] Embed Pods Frameworks */,
+				FFD200864ACC5FA97078846A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +187,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C238221A0D730A704A01818 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-payEphone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		776329AB2F4E6F28B15F0BDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-payEphone/Pods-payEphone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD200864ACC5FA97078846A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-payEphone/Pods-payEphone-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-payEphone/Pods-payEphone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C192D7A1FADE37F00EC4C36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6641FA1FADF0A3009AFB64 /* FindController.swift in Sources */,
+				6C6641F61FADE805009AFB64 /* RegisterController.swift in Sources */,
 				6C192D841FADE37F00EC4C36 /* ViewController.swift in Sources */,
 				6C192D821FADE37F00EC4C36 /* AppDelegate.swift in Sources */,
+				6C6642001FADF159009AFB64 /* HistoryController.swift in Sources */,
+				6C6641FE1FADF103009AFB64 /* SettingController.swift in Sources */,
 				6C192D8A1FADE37F00EC4C36 /* payEphone.xcdatamodeld in Sources */,
+				6C6641FC1FADF0F2009AFB64 /* MyCardController.swift in Sources */,
+				6C6641F81FADE823009AFB64 /* IntroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +389,7 @@
 		};
 		6C192D941FADE37F00EC4C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3356D64E12A0E62CA14AF05 /* Pods-payEphone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +405,7 @@
 		};
 		6C192D951FADE37F00EC4C36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC32CAC9CAACD5E54DAB843 /* Pods-payEphone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

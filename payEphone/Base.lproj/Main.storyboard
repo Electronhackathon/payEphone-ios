@@ -1,24 +1,515 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Xy-5J-VFx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--로그인-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="payEphone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-Uq-cV8" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="109" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXm-Wf-Pjd" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="160" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWE-pF-8TJ" customClass="MyUIButton" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="567" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.3411764705882353" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DN2-Qs-4FF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Facebook으로 로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Jzh-yg-OTF" kind="custom" customClass="BtnSegue" customModule="payEphone" customModuleProvider="target" id="tBq-JW-PDT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVH-M9-ATg" customClass="MyUIButton" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="623" width="335" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="아직 회원이 아니신가요?">
+                                    <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ERs-g9-Tqq" kind="show" id="U2Y-oe-GER"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy5-eB-bfo" customClass="MyUIButton" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="519" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.28627450980000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7ZH-Y8-e9l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Jzh-yg-OTF" kind="custom" customClass="BtnSegue" customModule="payEphone" customModuleProvider="target" id="ry8-5A-XC1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EVH-M9-ATg" firstAttribute="top" secondItem="JWE-pF-8TJ" secondAttribute="bottom" constant="16" id="2se-uq-exs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EVH-M9-ATg" secondAttribute="bottom" constant="20" id="5Xb-hf-L3K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JWE-pF-8TJ" secondAttribute="trailing" constant="20" id="7lk-2i-B6B"/>
+                            <constraint firstItem="vpx-Uq-cV8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="QoF-KK-Qzj"/>
+                            <constraint firstItem="DXm-Wf-Pjd" firstAttribute="top" secondItem="vpx-Uq-cV8" secondAttribute="bottom" constant="25" id="TKG-6L-DJE"/>
+                            <constraint firstItem="JWE-pF-8TJ" firstAttribute="top" secondItem="Vy5-eB-bfo" secondAttribute="bottom" constant="8" id="U2o-9y-kry"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vy5-eB-bfo" secondAttribute="trailing" constant="20" id="X3b-Bj-Vxw"/>
+                            <constraint firstItem="JWE-pF-8TJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dl0-X7-Y49"/>
+                            <constraint firstItem="Vy5-eB-bfo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ePM-hG-cj7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EVH-M9-ATg" secondAttribute="trailing" constant="20" id="gK1-eB-fx2"/>
+                            <constraint firstItem="EVH-M9-ATg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hIa-Gh-VBq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DXm-Wf-Pjd" secondAttribute="trailing" constant="20" id="klL-aX-6Pn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vpx-Uq-cV8" secondAttribute="trailing" constant="20" id="kro-Bw-zNI"/>
+                            <constraint firstItem="vpx-Uq-cV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oiM-Oj-ALn"/>
+                            <constraint firstItem="DXm-Wf-Pjd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zHr-mm-Qyc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="로그인" id="dtU-XK-559"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-194" y="180"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RzF-D4-SGg">
+            <objects>
+                <viewController id="Jzh-yg-OTF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4Q-i7-6jA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_introduce" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-af-oB0">
+                                <rect key="frame" x="89.5" y="65" width="196" height="196"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95W-J2-toW">
+                                <rect key="frame" x="108" y="321" width="159" height="102"/>
+                                <string key="text">TestTestTestTestTest
+TestTestTestTest
+TestTestTest
+TestTest
+Test</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-bE-szP" customClass="MyUIButton" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.28627450980000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pqw-pG-hKs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ML5-yT-bRk" kind="showDetail" id="5y3-3c-D6U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VWb-k5-AyM" firstAttribute="trailing" secondItem="Qgf-bE-szP" secondAttribute="trailing" constant="20" id="99h-l0-qFR"/>
+                            <constraint firstItem="95W-J2-toW" firstAttribute="centerX" secondItem="f4Q-i7-6jA" secondAttribute="centerX" id="LC2-Wk-qUT"/>
+                            <constraint firstItem="95W-J2-toW" firstAttribute="top" secondItem="RZg-af-oB0" secondAttribute="bottom" constant="60" id="PeC-y3-cAv"/>
+                            <constraint firstItem="VWb-k5-AyM" firstAttribute="bottom" secondItem="Qgf-bE-szP" secondAttribute="bottom" constant="20" id="Zcx-ID-Wz4"/>
+                            <constraint firstItem="Qgf-bE-szP" firstAttribute="leading" secondItem="VWb-k5-AyM" secondAttribute="leading" constant="20" id="oyT-ya-CAL"/>
+                            <constraint firstItem="RZg-af-oB0" firstAttribute="centerX" secondItem="f4Q-i7-6jA" secondAttribute="centerX" id="x8U-rD-mlJ"/>
+                            <constraint firstItem="RZg-af-oB0" firstAttribute="top" secondItem="VWb-k5-AyM" secondAttribute="top" constant="45" id="xHj-6l-H4Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VWb-k5-AyM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11X-xq-yhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="179"/>
+        </scene>
+        <!--Find Controller-->
+        <scene sceneID="RuW-Mx-3KF">
+            <objects>
+                <viewController id="wMf-ES-cha" customClass="FindController" customModule="payEphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vIy-Nn-gAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8EV-If-Njb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="찾기" id="45a-2B-1MN"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Jlp-IL-gfp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="btn_btm_find" id="0DM-oc-gCI">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
+                        <color key="badgeColor" red="0.16078431372549018" green="0.28627450980392155" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duk-P0-5Uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-377" y="1686"/>
+        </scene>
+        <!--회원가입-->
+        <scene sceneID="izb-To-Gnb">
+            <objects>
+                <viewController title="회원가입" id="ERs-g9-Tqq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMR-Q8-8oG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-5a-Ymz" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xX0-OI-Pcb" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="155" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEj-Bw-lBK" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="206" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kSD-Vj-syo" customClass="LoginTextField" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="257" width="335" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIs-h0-NW4" customClass="MyUIButton" customModule="payEphone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.28627450980000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1rU-Fg-PZw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Jzh-yg-OTF" kind="showDetail" id="AnB-34-dWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xX0-OI-Pcb" firstAttribute="top" secondItem="mUB-5a-Ymz" secondAttribute="bottom" constant="25" id="0mx-8J-fdf"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="trailing" secondItem="qEj-Bw-lBK" secondAttribute="trailing" constant="20" id="26u-tu-qeb"/>
+                            <constraint firstItem="xX0-OI-Pcb" firstAttribute="leading" secondItem="ma0-lj-bEJ" secondAttribute="leading" constant="20" id="3MD-5D-wby"/>
+                            <constraint firstItem="qEj-Bw-lBK" firstAttribute="leading" secondItem="ma0-lj-bEJ" secondAttribute="leading" constant="20" id="Eux-X8-rK8"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="trailing" secondItem="xX0-OI-Pcb" secondAttribute="trailing" constant="20" id="IBz-DL-aLf"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="trailing" secondItem="kSD-Vj-syo" secondAttribute="trailing" constant="20" id="O8G-OP-1y9"/>
+                            <constraint firstItem="IIs-h0-NW4" firstAttribute="leading" secondItem="ma0-lj-bEJ" secondAttribute="leading" constant="20" id="Ri5-Qy-TTI"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="trailing" secondItem="IIs-h0-NW4" secondAttribute="trailing" constant="20" id="bCm-Ug-rFm"/>
+                            <constraint firstItem="kSD-Vj-syo" firstAttribute="leading" secondItem="ma0-lj-bEJ" secondAttribute="leading" constant="20" id="bWs-VY-YFP"/>
+                            <constraint firstItem="qEj-Bw-lBK" firstAttribute="top" secondItem="xX0-OI-Pcb" secondAttribute="bottom" constant="25" id="dSI-9N-CSz"/>
+                            <constraint firstItem="mUB-5a-Ymz" firstAttribute="top" secondItem="ma0-lj-bEJ" secondAttribute="top" constant="40" id="oGO-SG-CQ3"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="bottom" secondItem="IIs-h0-NW4" secondAttribute="bottom" constant="20" id="rHX-Nu-XdC"/>
+                            <constraint firstItem="ma0-lj-bEJ" firstAttribute="trailing" secondItem="mUB-5a-Ymz" secondAttribute="trailing" constant="20" id="sNA-fc-ENu"/>
+                            <constraint firstItem="kSD-Vj-syo" firstAttribute="top" secondItem="qEj-Bw-lBK" secondAttribute="bottom" constant="25" id="sYT-Gv-MMZ"/>
+                            <constraint firstItem="mUB-5a-Ymz" firstAttribute="leading" secondItem="ma0-lj-bEJ" secondAttribute="leading" constant="20" id="xzq-KE-vNg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ma0-lj-bEJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="324-ae-EKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="883"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0li-m9-u79">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Xy-5J-VFx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a43-zB-87d">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WVe-9L-1VQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wx-OZ-PiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-958" y="181"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="evU-kM-10P">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ML5-yT-bRk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Poa-Bd-Tr0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.28627450980000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wMf-ES-cha" kind="relationship" relationship="viewControllers" id="aqH-n7-wBx"/>
+                        <segue destination="NO3-qb-FwR" kind="relationship" relationship="viewControllers" id="ZXp-45-63h"/>
+                        <segue destination="hG3-oQ-bFW" kind="relationship" relationship="viewControllers" id="2AX-tb-CKX"/>
+                        <segue destination="aGR-YG-6AH" kind="relationship" relationship="viewControllers" id="zMz-4T-dUl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cng-QK-r7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="904"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="0OC-wg-fnm">
+            <objects>
+                <viewController id="aGR-YG-6AH" customClass="SettingController" customModule="payEphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rk7-sq-Jci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Plz-dG-q7P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="환경설정" id="NOP-Qx-dbT"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="phg-mz-BZz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="btn_btm_settings" id="pPC-7D-0EI">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NES-as-UQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="1685"/>
+        </scene>
+        <!--History Controller-->
+        <scene sceneID="JHF-vm-lnp">
+            <objects>
+                <viewController id="hG3-oQ-bFW" customClass="HistoryController" customModule="payEphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUF-LO-6db">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVo-br-aFr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="사용내역" id="U9W-Fy-noq"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ya8-vG-9i8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="btn_btm_history" id="IlC-JW-hHR">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbL-AH-qvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="1687"/>
+        </scene>
+        <!--My Card Controller-->
+        <scene sceneID="UHF-NS-Ep3">
+            <objects>
+                <viewController id="NO3-qb-FwR" customClass="MyCardController" customModule="payEphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eJC-1I-UrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJt-5f-qyX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="내 카드" id="mXu-8A-G4h"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="CCO-k8-xMi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="btn_btm_mycard" id="Qpb-jB-qcv">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Knf-7u-OsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="1686"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_btm_find" width="18" height="18"/>
+        <image name="btn_btm_history" width="18" height="20"/>
+        <image name="btn_btm_mycard" width="20" height="16"/>
+        <image name="btn_btm_settings" width="20" height="20"/>
+        <image name="pic_introduce" width="196" height="196"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AnB-34-dWP"/>
+    </inferredMetricsTieBreakers>
 </document>

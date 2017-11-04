@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FindController.swift
 //  payEphone
 //
 //  Created by 윤영채 on 2017. 11. 4..
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FindController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tabBarItem?.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
